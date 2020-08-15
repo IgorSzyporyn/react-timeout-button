@@ -3,14 +3,14 @@ import React, { ButtonHTMLAttributes, MouseEvent, useEffect, useState } from 're
 import { getClassnames } from 'utils/get-classnames'
 import { COMPONENT_ID } from '../constants'
 import { getButtonText } from '../utils/get-button-text'
-import { TimeoutButtonOverlay } from './TimeoutButtonOverlay'
+import { ReactTimeoutButtonOverlay } from './ReactTimeoutButtonOverlay'
 
 const Button = styled.button({
   position: 'relative',
   overflow: 'hidden',
 })
 
-type TimeoutButtonState = {
+type ReactTimeoutButtonState = {
   buttonText: string
   paused: boolean
   timeElapsed: number
@@ -19,7 +19,7 @@ type TimeoutButtonState = {
   touched: boolean
 }
 
-export type TimeoutButtonProps = {
+export type ReactTimeoutButtonProps = {
   cancelTimeoutOnHover?: boolean
   digits?: 0 | 1 | 2 | 3
   overlay?: boolean
@@ -33,7 +33,7 @@ export type TimeoutButtonProps = {
   onTimeout?: () => void
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-export const TimeoutButton = (props: TimeoutButtonProps) => {
+export const ReactTimeoutButton = (props: ReactTimeoutButtonProps) => {
   const {
     cancelTimeoutOnHover,
     children,
@@ -54,7 +54,7 @@ export const TimeoutButton = (props: TimeoutButtonProps) => {
   const [
     { buttonText, paused, timeElapsed, timeStarted, timeRemaining, touched },
     setState,
-  ] = useState<TimeoutButtonState>({
+  ] = useState<ReactTimeoutButtonState>({
     buttonText: getButtonText(text || '', timeout, digits),
     paused: false,
     timeElapsed: 0,
@@ -167,7 +167,7 @@ export const TimeoutButton = (props: TimeoutButtonProps) => {
       }}
     >
       {allowOverlay && overlayPosition === 'before' && (
-        <TimeoutButtonOverlay
+        <ReactTimeoutButtonOverlay
           className={`${COMPONENT_ID}__overlay ${COMPONENT_ID}__overlay--before`}
           color={overlayBackground}
           opacity={overlayOpacity}
@@ -183,7 +183,7 @@ export const TimeoutButton = (props: TimeoutButtonProps) => {
         </span>
       )}
       {allowOverlay && overlayPosition === 'after' && (
-        <TimeoutButtonOverlay
+        <ReactTimeoutButtonOverlay
           className={`${COMPONENT_ID}__overlay ${COMPONENT_ID}__overlay--after`}
           color={overlayBackground}
           opacity={overlayOpacity}
@@ -196,7 +196,7 @@ export const TimeoutButton = (props: TimeoutButtonProps) => {
   )
 }
 
-TimeoutButton.defaultProps = {
+ReactTimeoutButton.defaultProps = {
   digits: 0,
   overlay: false,
   overlayPosition: 'before',

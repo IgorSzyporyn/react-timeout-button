@@ -21,7 +21,7 @@ const rtlKeyframes = keyframes`
 `
 
 const Wrapper = styled.span(
-  ({ timeout, paused, color, opacity, rtl }: TimeoutButtonOverlayProps) => ({
+  ({ timeout, paused, color, opacity, rtl }: ReactTimeoutButtonOverlayProps) => ({
     animation: `${rtl ? rtlKeyframes : ltrKeyframes} ${timeout / 1000}s linear 1`,
     animationFillMode: 'forwards',
     animationPlayState: paused ? 'paused' : 'initial',
@@ -35,7 +35,7 @@ const Wrapper = styled.span(
   })
 )
 
-export type TimeoutButtonOverlayProps = {
+export type ReactTimeoutButtonOverlayProps = {
   color?: string
   opacity?: number
   paused?: boolean
@@ -43,11 +43,11 @@ export type TimeoutButtonOverlayProps = {
   timeout: number
 } & HTMLAttributes<HTMLSpanElement>
 
-export const TimeoutButtonOverlay = (props: TimeoutButtonOverlayProps) => {
+export const ReactTimeoutButtonOverlay = (props: ReactTimeoutButtonOverlayProps) => {
   return <Wrapper {...props} />
 }
 
-TimeoutButtonOverlay.defaultProps = {
+ReactTimeoutButtonOverlay.defaultProps = {
   color: '#000000',
   opacity: 0.15,
 }
