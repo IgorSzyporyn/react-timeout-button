@@ -12,6 +12,10 @@ The component plays very well with frameworks such as [styled-components](http:/
 - Complete timer on hover
 - Display remaining time with 0-3 digits
 
+The templated in remaining time text will format itself if timeout is higher than 60 seconds.
+
+As example 90 seconds timeout will present itself as `1m 30s`, and only switch to `60` when 30 seconds has passed, and timer is at 1 minute.
+
 <p>&nbsp;</p>
 
 ## Overview
@@ -19,6 +23,7 @@ The component plays very well with frameworks such as [styled-components](http:/
 - **[1. Installation and usage](#installation)**
   - **[1.1 With frameworks](#with-frameworks)**
 - **[2. Options](#options)**
+- **[3. DOM output](#dom)**
 
 <p>&nbsp;</p>
 
@@ -169,3 +174,21 @@ const Button = styled(TimedButton)`
 - ### onTimeout?: () => void
 
   A function that will be called when the timer has completed.
+
+<p>&nbsp;</p>
+
+## <a name="dom"></a>DOM output
+
+The regular usage of the component, and the output when used as a referenced component will vary - but generally the inner DOM structure of the wrapper will remain when referenced.
+
+### Regular output
+
+Note that only one of the overlays are visible at the time depending on the value of the `overlayPosition` property.
+
+```html
+<button class="react-timeout-button">
+  <span class="react-timeout-button__overlay react-timeout-button__overlay--before" />
+  <span class="react-timeout-button__text">Continue in (3)</span>
+  <span class="react-timeout-button__overlay react-timeout-button__overlay--after" />
+</button>
+```
