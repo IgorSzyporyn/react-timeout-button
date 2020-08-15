@@ -4,7 +4,7 @@
     <img src="https://raw.githubusercontent.com/IgorSzyporyn/react-timeout-button/master/assets/logo-large.png" />
   </p>
   <p align="center">
-    <a href="https://dixx-website-frontend.vercel.app" target="_blank" title="Storybook of react-timeout-button">react-timeout-button storybook</a>
+    <a href="https://igorszyporyn.github.io/react-timeout-button" target="_blank" title="Storybook of react-timeout-button">react-timeout-button storybook</a>
   </p>
   <p>&nbsp;</p>
 </div>
@@ -63,7 +63,7 @@ This will render a basic HTML button with a 8 second timer and show the text ins
 
 <p>&nbsp;</p>
 
-> **ReactTimeoutButton accepts any property that a normal `<button>` tag would do, as well as children - so just pour on.**
+> ReactTimeoutButton accepts any property that a normal `<button>` tag would do, as well as children - so just pour on.
 
 <p>&nbsp;</p>
 
