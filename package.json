@@ -51,7 +51,9 @@
     "changelog:clean": "rimraf CHANGELOG.md",
     "release:major": "npm run changelog:major && npm version major && npm run github:release && npm run build && npm publish",
     "release:minor": "npm run changelog:minor && npm version minor && npm run github:release && npm run build && npm publish",
-    "release:patch": "npm run changelog:patch && npm version patch && npm run github:release && npm run build && npm publish"
+    "release:patch": "npm run changelog:patch && npm version patch && npm run github:release && npm run build && npm publish",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@emotion/core": "^10.0.34",
@@ -59,11 +61,17 @@
     "react": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.1",
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.1",
+    "@storybook/addon-actions": "^6.0.10",
+    "@storybook/addon-essentials": "^6.0.10",
+    "@storybook/addon-links": "^6.0.10",
+    "@storybook/react": "^6.0.10",
     "@types/react": "^16.9.46",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
+    "babel-loader": "^8.1.0",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -72,7 +80,9 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "react-is": "^16.13.1",
     "rimraf": "^3.0.2",
+    "storybook-facelift": "^6.0.18",
     "typescript": "^3.9.7"
   },
   "husky": {
