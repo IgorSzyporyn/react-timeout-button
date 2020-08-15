@@ -5,7 +5,7 @@ export function getClassnames(source = '') {
   const sourceSplit = source.split(',')
 
   classNameArray = [...classNameArray, ...sourceSplit]
-  const className = classNameArray.join(',')
+  const className = classNameArray.join(' ')
 
   return className
 }
