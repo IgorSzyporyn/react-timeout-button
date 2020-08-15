@@ -1,20 +1,32 @@
-# react-timeout-button
+<div>
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/IgorSzyporyn/react-timeout-button/master/assets/logo-large.png" />
+  </p>
+  <p align="center">
+    <a href="https://dixx-website-frontend.vercel.app" target="_blank" title="Storybook of react-timeout-button">react-timeout-button storybook</a>
+  </p>
+</div>
 
-Simple unstyled button that will call a given function when specified time has elapsed.
+<p align="center">
+  Simple unstyled button that will call a given function when specified time has elapsed.
+</p>
 
-The component plays very well with frameworks such as [styled-components](http://www.styled-components.com), [emotion](https://emotion.sh/) and [Material UI](http://www.material-ui.com).
+<p align="center">
+  The component plays very well with frameworks such as <a target="_blank" href="http://www.styled-components.com">styled-components</a>, <a target="_blank" href="https://emotion.sh">emotion</a> and <a target="_blank" href="http://www.material-ui.com">Material UI</a>.
+</p>
 
-- Use simple templated string to display text with remaining time (including a remove on completed syntax)
-- Display time remaining with animated overlay, and customize
-  - overlay color and opacity
-  - direction of overlay animation (ltr or rtl)
-- Pause timer on hover
-- Complete timer on hover
-- Display remaining time with 0-3 digits
+<p>&nbsp;</p>
 
-The templated in remaining time text will format itself if timeout is higher than 60 seconds.
-
-As example 90 seconds timeout will present itself as `1m 30s`, and only switch to `60` when 30 seconds has passed, and timer is at 1 minute.
+<ul>
+  <li>Simple text syntax gives control over output</li>
+  <li>Formatted remaining time output if more than 60 seconds (e.g. 2m 30s)</li>
+  <li>Display time remaining with animated overlay</li>
+  <li>Control overlay color and opacity</li>
+  <li>Control direction of overlay animation (ltr or rtl)</li>
+  <li>Display remaining time with 0-3 digits</li>
+  <li>Pause timer on hover</li>
+  <li>Complete timer on hover</li>
+</ul>
 
 <p>&nbsp;</p>
 
