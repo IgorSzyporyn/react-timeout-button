@@ -1,6 +1,6 @@
 {
   "name": "react-timeout-button",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "React timed button with overlay option, formatted time output and no styles",
   "keywords": [
     "React",
