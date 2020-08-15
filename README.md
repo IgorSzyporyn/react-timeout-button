@@ -38,35 +38,35 @@ $ npm i react-timeout-button
 Use it as you wish
 
 ```js
-import { TimedButton } from 'react-timeout-button'
+import { ReactTimeoutButton } from 'react-timeout-button'
 
 ....
 
-<TimedButton timeout={8000} text="Continue in $timeout" />
+<ReactTimeoutButton timeout={8000} text="Continue in $timeout" />
 ```
 
 This will render a basic HTML button with a 8 second timer and show the text inside replacing `$timeout` with time remaining in full seconds ...and not look very good.
 
 <p>&nbsp;</p>
 
-> **TimedButton accepts any property that a normal `<button>` tag would do, as well as children - so just pour on.**
+> **ReactTimeoutButton accepts any property that a normal `<button>` tag would do, as well as children - so just pour on.**
 
 <p>&nbsp;</p>
 
 ### <a name="with-frameworks"></a>With frameworks
 
-TimedButton can also be used as a referenced component by frameworks such as [Material UI](http://www.material-ui.com).
+ReactTimeoutButton can also be used as a referenced component by frameworks such as [Material UI](http://www.material-ui.com).
 
 ```js
 import { Button } from '@material-ui/core'
-import { TimedButton } from 'react-timeout-button'
+import { ReactTimeoutButton } from 'react-timeout-button'
 
 ...
 
 <Button
   variant="contained"
   color="primary"
-  component={TimedButton}
+  component={ReactTimeoutButton}
   timeout={8000}
   text="Continue ${in ($timeout)}"
   overlay={true}
@@ -77,11 +77,11 @@ Or you can style it with [styled-components](http://www.styled-components.com) o
 
 ```js
 import { styled } from 'styled-components'
-import { TimedButton } from 'react-timeout-button'
+import { ReactTimeoutButton } from 'react-timeout-button'
 
 ...
 
-const Button = styled(TimedButton)`
+const Button = styled(ReactTimeoutButton)`
   border-radius: 3px;
   background-color: #ff0000;
   color: #ffffff;
@@ -103,7 +103,7 @@ const Button = styled(TimedButton)`
 ## Options
 
 ```js
-<TimedButton
+<ReactTimeoutButton
   cancelTimeoutOnHover?: boolean
   digits?: 0 | 1 | 2 | 3
   overlay?: boolean
