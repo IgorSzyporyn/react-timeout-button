@@ -1,16 +1,18 @@
-#### 2.0.1 (2020-08-15)
+#### 2.0.2 (2020-08-15)
 
 ##### Documentation Changes
 
-* **readme:**  logo and better presentation ([12fab7f8](https://github.com/IgorSzyporyn/react-timeout-button/commit/12fab7f858129023add4f6b82be585e389bff487))
+* **storybook:**  configured and added stories to storybook ([5bb9f554](https://github.com/IgorSzyporyn/react-timeout-button/commit/5bb9f554198a1609318489b0fc1c3e5a54039fb7))
+* **readme:**  more spacing up top ([52fcb55f](https://github.com/IgorSzyporyn/react-timeout-button/commit/52fcb55f896ddcf99f915c37737cf05684191547))
 
 ##### New Features
 
-* **dev:**
-  *  added logo source and images to package ([ac79498b](https://github.com/IgorSzyporyn/react-timeout-button/commit/ac79498b77e4d77edfeba47f88a412da84b799e0))
-  *  added storybook to environment ([417046bd](https://github.com/IgorSzyporyn/react-timeout-button/commit/417046bdee6660d37942459378bd8bd6c1154793))
+* **dev:**  added deployment of storybook to server ([ade3ec10](https://github.com/IgorSzyporyn/react-timeout-button/commit/ade3ec10c7e8f4c1f13ae17756625a152628d94d))
 
 ##### Bug Fixes
 
-* **readme:**  markdown understood by github but not npm ([17138468](https://github.com/IgorSzyporyn/react-timeout-button/commit/17138468ccd3132cca232139ca6d37f11f037540))
+* **component:**
+  *  wrapped to handle being forwarded ([7a2e7eff](https://github.com/IgorSzyporyn/react-timeout-button/commit/7a2e7eff217b2ef4f472730c56271556255817b3))
+  *  import was using absolute path ([12bfd92d](https://github.com/IgorSzyporyn/react-timeout-button/commit/12bfd92d1322030840b24f31373c11a223a7e86d))
+* **util:**  joined array with , instead of space for class names ([4fe90de4](https://github.com/IgorSzyporyn/react-timeout-button/commit/4fe90de4f23fec6830ed9fb0750a53a7aab1aed4))
 
