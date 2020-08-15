@@ -1,10 +1,12 @@
 <div>
+  <p>&nbsp;</p>
   <p align="center">
     <img src="https://raw.githubusercontent.com/IgorSzyporyn/react-timeout-button/master/assets/logo-large.png" />
   </p>
   <p align="center">
     <a href="https://dixx-website-frontend.vercel.app" target="_blank" title="Storybook of react-timeout-button">react-timeout-button storybook</a>
   </p>
+  <p>&nbsp;</p>
 </div>
 
 <p align="center">
