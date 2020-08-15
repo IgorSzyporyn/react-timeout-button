@@ -118,60 +118,60 @@ const Button = styled(ReactTimeoutButton)`
 />
 ```
 
-- ### cancelTimeoutOnHover?: boolean
+- **cancelTimeoutOnHover?: boolean**
 
   If set to true then the timer will run out when user hovers over button.
 
-- ### digits?: 0 | 1 | 2 | 3
+- **digits?: 0 | 1 | 2 | 3**
 
-  **_Default: 0_**
+  _Default: 0_
 
   How many digits to show in the `$timeout` replaced string.
 
-- ### overlay?: boolean
+- **overlay?: boolean**
 
   Set to `true` to show an animation of the remaining time with a opaque color retracting from left-to-right or right-to-left.
 
-- ### overlayBackground?: string
+- **overlayBackground?: string**
 
-  **_Default: "#000000"_**
+  _Default: "#000000"_
 
   Set the color used for overlay.
 
-- ### overlayOpacity?: number
+- **overlayOpacity?: number**
 
-  **_Default: 0.15_**
+  _Default: 0.15_
 
   Set the opacity used for overlay.
 
-- ### overlayPosition?: "before" | "after"
+- **overlayPosition?: "before" | "after"**
 
-  **_Default: "before"_**
+  _Default: "before"_
 
   Control if the overlay should be behind of in front of any possibly shown text.
 
-- ### overlayRtl?: boolean
+- **overlayRtl?: boolean**
 
   Set to `true` to make overlay animation go right-to-left.
 
-- ### pauseOnHover?: boolean
+- **pauseOnHover?: boolean**
 
   Set to `true` to pause the timer when user hovers over button.
 
-- ### text?: string
+- **text?: string**
 
-  **_Default: "\$timeout"_**
+  _Default: "\$timeout"_
 
   Enter text to display on button with a simple templated syntax to do it.
 
   - **\$timeout** - This string will be replaced by the time remaining with as many digits as configured (default 0)
   - **\${}** - Any text inside the curly braces will be removed when the timer is done.
 
-- ### timeout: number
+- **timeout: number**
 
   How long the timer should be set to in miliseconds (e.g. 1000 equals 1 second).
 
-- ### onTimeout?: () => void
+- **onTimeout?: () => void**
 
   A function that will be called when the timer has completed.
 
