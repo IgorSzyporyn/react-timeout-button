@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import React, { ButtonHTMLAttributes, MouseEvent, useEffect, useState } from 'react'
-import { getClassnames } from 'utils/get-classnames'
+import { getClassnames } from '../utils/get-classnames'
 import { COMPONENT_ID } from '../constants'
 import { getButtonText } from '../utils/get-button-text'
 import { ReactTimeoutButtonOverlay } from './ReactTimeoutButtonOverlay'
