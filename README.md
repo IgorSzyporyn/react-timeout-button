@@ -2,7 +2,7 @@
 
 Simple unstyled button that will call a given function when specified time has elapsed.
 
-The component plays very well with frameworks such as [styled-components](http://www.styled-components.com), [emotion](http://www.emotion.com) and [Material UI](http://www.material-ui.com).
+The component plays very well with frameworks such as [styled-components](http://www.styled-components.com), [emotion](https://emotion.sh/) and [Material UI](http://www.material-ui.com).
 
 - Use simple templated string to display text with remaining time (including a remove on completed syntax)
 - Display time remaining with animated overlay, and customize
@@ -73,7 +73,7 @@ import { TimedButton } from 'react-timeout-button'
 />
 ```
 
-Or you can style it with [styled-components](http://www.styled-components.com) or [emotion](http://www.emotion.com).
+Or you can style it with [styled-components](http://www.styled-components.com) or [emotion](https://emotion.sh/).
 
 ```js
 import { styled } from 'styled-components'
