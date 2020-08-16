@@ -64,26 +64,6 @@ export const ReactTimeoutButton = forwardRef<HTMLButtonElement, ReactTimeoutButt
       touched: false,
     })
 
-    let intervalTempo = 100
-
-    switch (digits) {
-      case 0:
-        intervalTempo = 350
-        break
-      case 1:
-        intervalTempo = 100
-        break
-      case 2:
-        intervalTempo = 20
-        break
-      case 3:
-        intervalTempo = 4
-        break
-      default:
-        intervalTempo = 4
-        break
-    }
-
     useEffect(() => {
       const interval = setInterval(() => {
         if (!paused) {
@@ -107,7 +87,7 @@ export const ReactTimeoutButton = forwardRef<HTMLButtonElement, ReactTimeoutButt
             buttonText,
           }))
         }
-      }, intervalTempo)
+      }, 4)
 
       if (timeRemaining <= 0 || (touched && cancelTimeoutOnHover)) {
         const buttonText = getButtonText(text || '', 0)
@@ -121,11 +101,13 @@ export const ReactTimeoutButton = forwardRef<HTMLButtonElement, ReactTimeoutButt
 
         clearInterval(interval)
 
-        onTimeout && onTimeout()
+        if (onTimeout) {
+          onTimeout()
+        }
       }
 
       return () => clearInterval(interval)
-    }, [paused, timeElapsed, timeStarted, timeRemaining, touched])
+    }, [paused, timeElapsed, timeStarted, timeRemaining, touched, onTimeout])
 
     const handleTimedPause = (
       e: MouseEvent<HTMLButtonElement>,
