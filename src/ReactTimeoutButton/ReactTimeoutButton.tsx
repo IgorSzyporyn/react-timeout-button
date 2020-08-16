@@ -12,6 +12,7 @@ const Button = styled.button({
 
 type ReactTimeoutButtonState = {
   buttonText: string
+  callbackUsed: boolean
   paused: boolean
   timeElapsed: number
   timeRemaining: number
@@ -53,10 +54,11 @@ export const ReactTimeoutButton = forwardRef<HTMLButtonElement, ReactTimeoutButt
     } = props
 
     const [
-      { buttonText, paused, timeElapsed, timeStarted, timeRemaining, touched },
+      { buttonText, callbackUsed, paused, timeElapsed, timeStarted, timeRemaining, touched },
       setState,
     ] = useState<ReactTimeoutButtonState>({
       buttonText: getButtonText(text || '', timeout, digits),
+      callbackUsed: false,
       paused: false,
       timeElapsed: 0,
       timeRemaining: timeout,
@@ -92,22 +94,25 @@ export const ReactTimeoutButton = forwardRef<HTMLButtonElement, ReactTimeoutButt
       if (timeRemaining <= 0 || (touched && cancelTimeoutOnHover)) {
         const buttonText = getButtonText(text || '', 0)
 
-        setState((state) => ({
-          ...state,
-          timeRemaining: 0,
-          timeElapsed: timeout,
-          buttonText,
-        }))
+        setState((state) => {
+          if (onTimeout && !callbackUsed) {
+            onTimeout()
+          }
+
+          return {
+            ...state,
+            callbackUsed: true,
+            timeRemaining: 0,
+            timeElapsed: timeout,
+            buttonText,
+          }
+        })
 
         clearInterval(interval)
-
-        if (onTimeout) {
-          onTimeout()
-        }
       }
 
       return () => clearInterval(interval)
-    }, [paused, timeElapsed, timeStarted, timeRemaining, touched, onTimeout])
+    }, [paused, timeElapsed, timeStarted, timeRemaining, touched, callbackUsed])
 
     const handleTimedPause = (
       e: MouseEvent<HTMLButtonElement>,
