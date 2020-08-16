@@ -5,6 +5,11 @@ export const parameters = {
     autoThemeStory: true,
     ui: { elevation: 1 },
     includeNative: true,
+    override: {
+      brandImage:
+        'https://raw.githubusercontent.com/IgorSzyporyn/react-timeout-button/master/assets/logo-small.png',
+      brandUrl: 'https://www.npmjs.com/package/react-timeout-button',
+    },
     themes: [
       {
         type: 'mui',
@@ -17,7 +22,7 @@ export const parameters = {
                 main: '#ff0000',
               },
               secondary: {
-                main: '#953ff1',
+                main: '#f201df',
               },
             },
           },
@@ -27,7 +32,7 @@ export const parameters = {
                 main: '#ff0000',
               },
               secondary: {
-                main: '#953ff1',
+                main: '#f201df',
               },
             },
           },
