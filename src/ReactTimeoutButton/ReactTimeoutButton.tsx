@@ -95,7 +95,7 @@ export const ReactTimeoutButton = forwardRef<HTMLButtonElement, ReactTimeoutButt
         const buttonText = getButtonText(text || '', 0)
 
         setState((state) => {
-          if (onTimeout && !callbackUsed) {
+          if (onTimeout && !callbackUsed && !(touched && cancelTimeoutOnHover)) {
             onTimeout()
           }
 
@@ -146,10 +146,10 @@ export const ReactTimeoutButton = forwardRef<HTMLButtonElement, ReactTimeoutButt
     return (
       <Button
         className={classNames}
+        {...rest}
         onMouseEnter={(e) => {
           handleTimedPause(e, props.onMouseEnter)
         }}
-        {...rest}
         onMouseLeave={(e) => {
           handleTimedResume(e, props.onMouseLeave)
         }}
