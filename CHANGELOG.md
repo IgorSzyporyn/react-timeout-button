@@ -1,6 +1,6 @@
-#### 2.0.7 (2020-08-16)
+#### 2.0.8 (2020-08-17)
 
-##### Bug Fixes
+##### New Features
 
-* **package:**  removed unused dependency ([b5b693f6](https://github.com/IgorSzyporyn/react-timeout-button/commit/b5b693f62563f4435032648227853d3db327d1ef))
+* **package:**  added my npm businesscard as homepage ([9efe98aa](https://github.com/IgorSzyporyn/react-timeout-button/commit/9efe98aa3d453233dd595898d7e95ab1409e9d69))
 
